@@ -1,0 +1,73 @@
+{
+  "name": "zadock-react-training",
+  "proxy": "https://localhost:3001/api",
+  "version": "0.1.0",
+  "dependencies": {
+    "@babel/cli": "^7.25.9",
+    "@date-io/date-fns": "^3.0.0",
+    "@durlabh/dframework-ui": "https://github.com/manojpandeyDev18/dframework-ui.git",
+    "@emotion/react": "^11.11.4",   
+    "@emotion/styled": "^11.11.5",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.48",
+    "@material-ui/pickers": "^3.2.10",
+    "@mui/icons-material": "^6.1.5",
+    "@mui/lab": "^5.0.0-alpha.119",
+    "@mui/material": "^5.14.1",
+    "@mui/styles": "^6.1.6",
+    "@mui/x-data-grid-premium": "^7.11.0",
+    "@mui/x-date-pickers": "^7.11.0",
+    "@mui/x-license-pro": "^6.10.2",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "axios": "^0.26.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
+    "dayjs": "^1.11.11",
+    "formik": "^2.4.6",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
+    "i18next": "^23.16.4",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "pluralize": "^8.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "1.1.2",
+    "react-i18next": "^15.0.0",
+    "react-router": "^6.27.0",
+    "react-router-dom": "^6.27.0",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.13.0",
+    "sweetalert2": "^11.14.4",
+    "throttle-debounce": "^5.0.2",
+    "web-vitals": "^4.2.2",
+    "xlsx": "^0.18.5",
+    "yup": "^1.4.0"
+  },
+  "scripts": {
+    "start": "DANGEROUSLY_DISABLE_HOST_CHECK=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

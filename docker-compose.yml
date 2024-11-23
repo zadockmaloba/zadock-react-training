@@ -1,0 +1,47 @@
+version: '2.2'
+services:
+  mssql:
+    #build: ./mssql
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: react-training-sql
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "MSSQL_SA_PASSWORD=Admin@1234"
+    restart: always
+    ports:
+      - 1433:1433
+    networks:
+      - elastic
+    volumes:
+      - mssql:/var/opt/mssql
+  elasticsearch:
+    image: elasticsearch:7.13.2
+    container_name: react-training-elasticsearch
+    environment:
+            - cluster.name=docker-cluster
+            - bootstrap.memory_lock=true
+            - discovery.type=single-node
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - data:/usr/share/elasticsearch/data
+    restart: always
+    depends_on:
+      - mssql
+    ports:
+      - 9200:9200
+    networks:
+      - elastic
+
+volumes:
+  data:
+    driver: local
+  mssql:
+    driver: local
+
+networks:
+  elastic:
+    driver: bridge
