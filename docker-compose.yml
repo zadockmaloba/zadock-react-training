@@ -1,5 +1,13 @@
 version: '2.2'
 services:
+  node-backend:
+    build: ./backend
+    container_name: react-training-backend
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - elastic
   mssql:
     #build: ./mssql
     image: mcr.microsoft.com/mssql/server:2022-latest
